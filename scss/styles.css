@@ -1,6 +1,7 @@
 @import url(../fonts/font-awesome/css/font-awesome.css);
 @import url(../fonts/fontello/css/fontello-embedded.css);
 @import url("https://fonts.googleapis.com/css?family=Montserrat:200,300,400|Raleway:400,500,600,700,800|Roboto");
+@import url(../stylesheets/search.css);
 /* line 8, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
 * {
   margin: 0;
@@ -22,8 +23,21 @@
   .slider .upper {
     max-width: 1920px;
     display: flex; }
+  /* line 30, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  .slider label {
+    display: none;
+    width: 50px;
+    height: 50px;
+    background-image: url(../img/if_menu.svg);
+    background-size: 100%; }
+  /* line 37, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  .slider #menu {
+    display: none; }
+  /* line 40, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  .slider input[type="checkbox"]:checked ~ .menu {
+    display: block; }
 
-/* line 33, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+/* line 48, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
 .logo {
   margin-top: 40px;
   margin-left: 600px;
@@ -40,15 +54,11 @@
   align-items: center;
   display: flex;
   transition: 0.3s; }
-  /* line 49, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 64, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .logo:hover {
     opacity: 0.6; }
 
-/* line 53, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
-.hidden_menu {
-  display: none; }
-
-/* line 56, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+/* line 69, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
 .menu {
   margin-left: 189px;
   margin-top: 62px;
@@ -56,10 +66,10 @@
   list-style-type: none;
   display: flex;
   flex-wrap: wrap; }
-  /* line 63, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 76, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .menu li {
     padding-left: 30px; }
-  /* line 66, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 79, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .menu a {
     text-decoration: none;
     width: 42px;
@@ -70,7 +80,7 @@
     text-align: left;
     color: #ffffff;
     transition: 0.3s; }
-    /* line 76, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 89, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .menu a:hover {
       width: 64px;
       height: 11px;
@@ -81,7 +91,7 @@
       color: #c7b299;
       transition: 0.3s; }
 
-/* line 89, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+/* line 102, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
 .card {
   text-decoration: none;
   width: 18px;
@@ -89,33 +99,32 @@
   font-size: 24px;
   color: #ffffff;
   margin-top: 55px;
-  padding-left: 68px; }
-  /* line 97, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  padding-left: 50px; }
+  /* line 110, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .card:hover {
     color: #c7b299;
     transition: 0.2s; }
 
-/* line 103, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+/* line 116, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
 .search {
   font-size: 24px;
-  margin-left: 28px;
-  margin-top: 55px;
+  margin-left: 15px;
   width: 24px;
   height: 24px;
   color: #ffffff; }
-  /* line 110, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 122, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .search:hover {
     color: #c7b299;
     transition: 0.2s; }
 
-/* line 116, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+/* line 128, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
 .sliderblock {
   padding-top: 285px;
   max-width: 1920px;
   display: flex;
   justify-content: space-between; }
 
-/* line 124, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+/* line 136, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
 .arrow {
   margin-left: 150px;
   display: block;
@@ -125,12 +134,12 @@
   text-decoration: none;
   color: #ffffff;
   transition: color 0.3s, transform 0.3s; }
-  /* line 133, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 145, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .arrow:hover {
     color: #d3c1ad;
     transform: translate(-15px, 0); }
 
-/* line 139, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+/* line 151, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
 .arrowright {
   margin-right: 150px;
   display: block;
@@ -140,16 +149,16 @@
   text-decoration: none;
   color: #ffffff;
   transition: color 0.3s, transform 0.3s; }
-  /* line 148, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 160, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .arrowright:hover {
     color: #d3c1ad;
     transform: translate(15px, 0); }
 
-/* line 155, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+/* line 167, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
 .textblock {
   width: 590px;
   text-align: center; }
-  /* line 158, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 170, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .textblock h4 {
     height: 34px;
     font-family: Raleway;
@@ -157,7 +166,7 @@
     font-weight: 400;
     text-align: center;
     color: #ffffff; }
-  /* line 166, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 178, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .textblock h1 {
     padding-top: 15px;
     height: 50px;
@@ -166,7 +175,7 @@
     font-weight: 800;
     text-align: center;
     color: #ffffff; }
-  /* line 175, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 187, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .textblock p {
     padding-top: 20px;
     height: 39px;
@@ -177,7 +186,7 @@
     text-align: center;
     color: #ffffff; }
 
-/* line 188, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+/* line 200, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
 .button {
   text-transform: uppercase;
   position: relative;
@@ -191,17 +200,17 @@
   box-shadow: inset -0px -3px 0 0 #736357;
   vertical-align: middle;
   outline: none; }
-  /* line 201, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 213, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .button:hover {
     background-color: #a39282; }
-  /* line 204, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 216, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .button:active {
     position: relative;
     top: 1px;
     right: 1px;
     box-shadow: inset -0px -1px 0 0 #736357;
     background-color: #998675; }
-  /* line 211, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 223, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .button .get {
     font-family: Raleway;
     font-size: 14px;
@@ -211,7 +220,7 @@
     position: absolute;
     left: 40px;
     top: 15px; }
-  /* line 221, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 233, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .button .purchase {
     height: 11px;
     width: 94px;
@@ -223,7 +232,7 @@
     position: absolute;
     left: 25px;
     top: 15px; }
-  /* line 233, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 245, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .button .galarybut {
     font-family: Raleway;
     font-size: 14px;
@@ -235,7 +244,7 @@
     left: 40px;
     top: 15px; }
 
-/* line 246, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+/* line 258, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
 .sliderdot {
   margin: 327px auto 0;
   width: 110px;
@@ -243,7 +252,7 @@
   justify-content: space-between;
   list-style-type: none; }
 
-/* line 255, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+/* line 267, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
 .dot {
   margin-left: 10px;
   border-radius: 50%;
@@ -252,11 +261,11 @@
   height: 11px;
   opacity: 0.5;
   background-color: #ffffff; }
-  /* line 263, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 275, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .dot:hover {
     opacity: 1; }
 
-/* line 268, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+/* line 280, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
 .dotactive {
   margin-left: 10px;
   border-radius: 50%;
@@ -266,7 +275,7 @@
   background-color: transparent;
   border: solid 2px #d3c1ad; }
 
-/* line 278, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+/* line 290, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
 .topsection {
   min-height: 1075px;
   width: 1920px;
@@ -274,7 +283,7 @@
   background-image: url(../img/browser-center.jpg), url(../img/browser-left.jpg), url(../img/browser-right.jpg);
   background-repeat: no-repeat;
   background-position: bottom center, bottom left 346px, bottom right 344px; }
-  /* line 289, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 301, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .topsection .links {
     display: flex;
     justify-content: space-between;
@@ -284,7 +293,7 @@
     padding-right: 424px;
     background-color: #ffffff;
     padding-bottom: 80px; }
-  /* line 300, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 312, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .topsection .forlink {
     display: block;
     height: 210px;
@@ -294,7 +303,7 @@
     text-decoration: none;
     text-align: center;
     line-height: 100px; }
-    /* line 309, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 321, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .topsection .forlink:before {
       position: absolute;
       top: 225px;
@@ -303,22 +312,22 @@
       border-bottom: 3px solid #f1eee9;
       content: "";
       transition: 0.4s; }
-    /* line 318, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 330, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .topsection .forlink:hover h3 {
       color: #c7b299; }
-    /* line 322, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 334, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .topsection .forlink:hover::before {
       border-bottom-color: #c7b299; }
-    /* line 326, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 338, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .topsection .forlink:hover i {
       color: #c7b299; }
-    /* line 330, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 342, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .topsection .forlink figure {
       height: 110px; }
-    /* line 334, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 346, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .topsection .forlink figcaption {
       height: 80px; }
-    /* line 337, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 349, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .topsection .forlink h3 {
       transition: color 0.5s;
       line-height: 0px;
@@ -327,7 +336,7 @@
       font-weight: 600;
       text-align: center;
       color: #555555; }
-    /* line 346, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 358, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .topsection .forlink p {
       padding-top: 20px;
       font-family: Montserrat;
@@ -335,18 +344,18 @@
       font-weight: 300;
       line-height: 1.71;
       color: #8c8c8c; }
-    /* line 354, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 366, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .topsection .forlink i {
       transition: color 0.5s; }
 
-/* line 360, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+/* line 372, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
 .textback {
   padding-top: 83px;
   margin: auto;
   width: 757px;
   display: flex;
   flex-direction: column; }
-  /* line 366, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 378, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .textback h2 {
     display: inline-block;
     font-family: Raleway;
@@ -354,7 +363,7 @@
     font-weight: 600;
     text-align: center;
     color: #555555; }
-  /* line 374, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 386, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .textback p {
     padding-top: 25px;
     height: 43px;
@@ -366,61 +375,61 @@
     text-align: center;
     color: #8c8c8c; }
 
-/* line 387, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+/* line 399, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
 .icon-icon2 {
   color: #555555;
   width: 49px;
   height: 49px;
   font-size: 49px; }
 
-/* line 394, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+/* line 406, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
 .icon-icon1 {
   color: #555555;
   width: 52px;
   height: 36px;
   font-size: 36px; }
 
-/* line 401, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+/* line 413, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
 .icon-icon {
   color: #555555;
   width: 44px;
   height: 44px;
   font-size: 44px; }
 
-/* line 408, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+/* line 420, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
 .icon-icon3 {
   color: #555555;
   width: 44px;
   height: 40px;
   font-size: 40px; }
 
-/* line 415, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+/* line 427, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
 .gside {
   width: 1920px;
   background-image: linear-gradient(to right, #211b19, #4e3427);
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap; }
-  /* line 421, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 433, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .gside h2 {
     font-family: Raleway;
     font-size: 28px;
     text-align: left;
     color: #ffffff;
     font-weight: 200; }
-    /* line 428, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 440, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .gside h2 span {
       color: #c7b299; }
-  /* line 432, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 444, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .gside a {
     margin-right: 376px; }
-  /* line 435, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 447, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .gside .aside_text {
     width: 530px;
     margin-top: 48px;
     margin-left: 376px;
     margin-bottom: 50px; }
-    /* line 440, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 452, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .gside .aside_text p {
       font-family: Montserrat;
       font-size: 18px;
@@ -428,11 +437,11 @@
       text-align: left;
       color: #615855; }
 
-/* line 450, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+/* line 462, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
 .barr {
   align-content: center; }
 
-/* line 455, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+/* line 467, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
 .galary {
   margin: auto;
   margin-top: 10px;
@@ -440,14 +449,14 @@
   justify-content: space-between;
   flex-wrap: wrap;
   width: 1170px; }
-  /* line 462, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 474, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .galary article {
     width: 370px;
     margin-top: 30px;
     background-color: #fbfaf8;
     position: relative;
     transition: 0.5s; }
-    /* line 468, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 480, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .galary article:after {
       content: '';
       position: absolute;
@@ -457,26 +466,26 @@
       border-bottom: 12px solid #fbfaf8;
       z-index: 1;
       transition: 0.5s; }
-    /* line 478, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 490, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .galary article:hover {
       background-color: #362f2d; }
-      /* line 481, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+      /* line 493, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
       .galary article:hover:after {
         border-bottom-color: #362f2d; }
-      /* line 484, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+      /* line 496, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
       .galary article:hover:hover:before {
         opacity: 0.7; }
-      /* line 488, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+      /* line 500, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
       .galary article:hover:hover a {
         opacity: 1; }
-    /* line 494, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 506, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .galary article:hover h4 {
       color: #ffffff; }
-    /* line 498, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 510, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .galary article:hover p {
       transition: 0.5s;
       color: #c7b299; }
-    /* line 502, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 514, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .galary article:before {
       content: "";
       width: 370px;
@@ -487,7 +496,7 @@
       top: 0;
       z-index: 1;
       transition: opacity 0.5s; }
-    /* line 514, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 526, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .galary article .links {
       text-decoration: none;
       color: #ffffff;
@@ -501,10 +510,10 @@
       top: 106px;
       opacity: 0;
       transition: color 0.5s opacity 0.5s; }
-      /* line 527, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+      /* line 539, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
       .galary article .links:hover {
         color: #c7b299; }
-    /* line 531, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 543, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .galary article .lupa {
       text-decoration: none;
       color: #ffffff;
@@ -518,10 +527,10 @@
       top: 106px;
       opacity: 0;
       transition: color 0.5s opacity 0.5s; }
-      /* line 544, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+      /* line 556, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
       .galary article .lupa:hover {
         color: #c7b299; }
-  /* line 549, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 561, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .galary h4 {
     padding-left: 28px;
     padding-top: 20px;
@@ -531,7 +540,7 @@
     text-align: left;
     color: #c7b299;
     transition: 0.5s; }
-  /* line 559, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 571, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .galary p {
     padding-left: 30px;
     padding-top: 12px;
@@ -543,14 +552,14 @@
     text-align: left;
     color: #d1d1d1;
     transition: 0.5s; }
-  /* line 571, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 583, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .galary a {
     transition: 0.5s;
     margin-top: 40px;
     margin-left: 500px;
     margin-bottom: 80px; }
 
-/* line 580, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+/* line 592, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
 .barr_menu {
   margin-top: 42px;
   margin-left: 658px;
@@ -559,7 +568,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   list-style-type: none; }
-  /* line 588, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 600, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .barr_menu a {
     display: block;
     height: 32px;
@@ -572,25 +581,25 @@
     line-height: 2.3;
     text-align: center;
     color: #8c8c8c; }
-    /* line 600, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 612, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .barr_menu a:hover {
       background-color: #998675;
       color: #ffffff;
       transition: 0.2s; }
-  /* line 606, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 618, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .barr_menu .all {
     width: 70px; }
-  /* line 609, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 621, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .barr_menu .other {
     width: 120px; }
-  /* line 612, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 624, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .barr_menu .photo {
     width: 135px; }
 
-/* line 617, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+/* line 629, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
 .videoblock {
   position: relative; }
-  /* line 619, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 631, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .videoblock:before {
     content: "";
     width: 100px;
@@ -603,13 +612,13 @@
     z-index: 1;
     opacity: 0;
     transition: opacity 0.7s; }
-  /* line 632, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 644, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .videoblock:hover:before {
     opacity: 0.7; }
-  /* line 636, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 648, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .videoblock:hover .textvideo {
     opacity: 1; }
-  /* line 641, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 653, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .videoblock .play {
     position: absolute;
     top: 225px;
@@ -617,14 +626,14 @@
     z-index: 1;
     opacity: 0.7;
     transition: opacity 0.4s; }
-    /* line 648, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 660, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .videoblock .play:hover {
       opacity: 1; }
-    /* line 653, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 665, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .videoblock .play:active {
       opacity: 0.8;
       transition: opacity 0.4s; }
-  /* line 659, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 671, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .videoblock .textvideo {
     margin: auto;
     display: flex;
@@ -635,14 +644,14 @@
     left: 685px;
     opacity: 0.2;
     transition: opacity 1.5s; }
-    /* line 669, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 681, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .videoblock .textvideo h2 {
       font-family: Raleway;
       font-size: 30px;
       font-weight: 500;
       text-align: center;
       color: #ffffff; }
-    /* line 676, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 688, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .videoblock .textvideo p {
       padding-top: 29px;
       font-family: Montserrat;
@@ -652,37 +661,37 @@
       text-align: center;
       color: #ffffff; }
 
-/* line 689, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+/* line 701, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
 .video {
   width: 1920px;
   height: 705px;
   position: relative; }
 
-/* line 696, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+/* line 708, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
 .mobile {
   background-color: #fbfaf8;
   display: flex;
   width: 1920px; }
-  /* line 700, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 712, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .mobile img {
     margin-left: 423px;
     margin-top: 80px; }
 
-/* line 707, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+/* line 719, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
 .text_mobile {
   margin-top: 195px;
   margin-left: 30px;
   width: 657px;
   display: flex;
   flex-direction: column; }
-  /* line 713, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 725, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .text_mobile h2 {
     font-family: Raleway;
     font-size: 30px;
     font-weight: 600;
     text-align: left;
     color: #555555; }
-  /* line 720, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 732, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .text_mobile p {
     padding-top: 40px;
     font-family: Montserrat;
@@ -692,11 +701,11 @@
     text-align: left;
     color: #8c8c8c;
     padding-bottom: 40px; }
-  /* line 730, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 742, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .text_mobile ul {
     padding-left: 50px;
     list-style-type: none; }
-  /* line 734, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 746, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .text_mobile li {
     padding-left: 50px;
     background: url(../img/list-style.png) no-repeat left center;
@@ -707,7 +716,7 @@
     text-align: left;
     color: #8c8c8c; }
 
-/* line 746, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+/* line 758, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
 .calc {
   padding-bottom: 70px;
   padding-top: 70px;
@@ -717,7 +726,7 @@
   display: flex;
   justify-content: space-between;
   text-align: center; }
-  /* line 755, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 767, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .calc h2 {
     padding-top: 30px;
     height: 34px;
@@ -727,7 +736,7 @@
     line-height: 0.75;
     text-align: center;
     color: #ffffff; }
-  /* line 765, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 777, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .calc p {
     text-transform: uppercase;
     padding-top: 21px;
@@ -737,14 +746,14 @@
     line-height: 1.43;
     text-align: center;
     color: #c7b299; }
-  /* line 775, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 787, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .calc span {
     display: inline-block;
     height: 30px;
     width: 30px;
     border-bottom: 2px solid #ffffff; }
 
-/* line 783, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+/* line 795, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
 .Post_link {
   margin-top: 40px;
   margin-left: 375px;
@@ -752,14 +761,14 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap; }
-  /* line 790, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 802, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .Post_link article {
     width: 370px;
     height: 395px;
     background-color: #f8f8f8;
     position: relative;
     transition: 0.3s; }
-    /* line 796, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 808, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .Post_link article:before {
       content: "";
       width: 370px;
@@ -770,27 +779,27 @@
       top: 0;
       z-index: 1;
       transition: 0.5s; }
-    /* line 807, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 819, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .Post_link article:hover {
       background-color: #362f2d; }
-    /* line 811, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 823, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .Post_link article:hover:before {
       opacity: 0.7; }
-    /* line 816, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 828, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .Post_link article:hover h4 {
       color: #ffffff; }
-    /* line 820, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 832, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .Post_link article:hover p {
       color: #c7b299; }
-    /* line 823, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 835, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .Post_link article:hover .date {
       background-color: #c7b299;
       z-index: 1; }
-    /* line 827, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 839, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .Post_link article:hover .month {
       background-color: #a48d72;
       z-index: 1; }
-    /* line 831, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 843, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .Post_link article .date {
       width: 50px;
       height: 35px;
@@ -808,7 +817,7 @@
       border-top-left-radius: 10%;
       border-top-right-radius: 10%;
       transition: 0.4s; }
-    /* line 850, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 862, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .Post_link article .month {
       width: 50px;
       height: 25px;
@@ -825,7 +834,7 @@
       border-bottom-left-radius: 10%;
       border-bottom-right-radius: 10%;
       transition: 0.4s; }
-  /* line 869, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 881, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .Post_link h4 {
     padding-left: 29px;
     padding-top: 30px;
@@ -835,7 +844,7 @@
     text-align: left;
     color: #555555;
     transition: 0.5s; }
-  /* line 879, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 891, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .Post_link p {
     padding-left: 29px;
     padding-top: 20px;
@@ -850,7 +859,7 @@
     color: #8c8c8c;
     transition: 0.5s; }
 
-/* line 895, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+/* line 907, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
 .slider_arrows {
   margin-top: 40px;
   padding-bottom: 80px;
@@ -858,7 +867,7 @@
   margin-left: 945px;
   display: flex;
   justify-content: space-between; }
-  /* line 902, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 914, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .slider_arrows a {
     display: block;
     width: 22px;
@@ -870,19 +879,19 @@
     color: #d1d1d1;
     line-height: 1.4;
     text-align: center; }
-    /* line 913, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 925, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .slider_arrows a:hover {
       color: #c7b299;
       border-color: #c7b299;
       transition: 0.3s; }
-  /* line 919, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 931, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .slider_arrows .fa-angle-left {
     padding-right: 2px; }
-  /* line 923, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 935, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .slider_arrows .fa-angle-right {
     padding-left: 2px; }
 
-/* line 928, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+/* line 940, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
 .more {
   margin-left: 29px;
   display: block;
@@ -893,49 +902,49 @@
   text-align: left;
   color: #c7b299;
   transition: 0.3s; }
-  /* line 938, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 950, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .more:hover {
     color: #f8f8f8; }
-  /* line 943, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 955, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .more:hover i {
     display: inline-block;
     transform: translate(5px, 0);
     opacity: 1; }
-  /* line 950, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 962, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .more i {
     transition: 0.3s;
     padding-left: 9px;
     opacity: 0.6; }
 
-/* line 961, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+/* line 973, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
 .partners {
   background-image: url(../img/background.jpg);
   height: 450px; }
-  /* line 964, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 976, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .partners .partners_link {
     padding-top: 140px;
     margin-left: 406px;
     margin-right: 404px;
     display: flex;
     justify-content: space-between; }
-  /* line 971, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 983, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .partners a {
     line-height: 200px;
     transition: 0.4s; }
-    /* line 974, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 986, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .partners a img {
       display: inline-block;
       vertical-align: middle; }
-    /* line 978, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 990, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .partners a:hover {
       opacity: 0.6; }
 
-/* line 985, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+/* line 997, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
 footer {
   background-color: #191919;
   border-top: 1px solid transparent; }
 
-/* line 991, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+/* line 1003, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
 .footblock {
   display: flex;
   justify-content: space-between;
@@ -943,19 +952,19 @@ footer {
   margin-right: 374px;
   margin-top: 80px;
   padding-bottom: 60px; }
-  /* line 998, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 1010, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .footblock .waxinfo {
     width: 260px; }
-    /* line 1000, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 1012, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .footblock .waxinfo a {
       margin: 0; }
-    /* line 1003, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 1015, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .footblock .waxinfo .more {
       color: #ffffff; }
-      /* line 1005, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+      /* line 1017, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
       .footblock .waxinfo .more:hover {
         color: #c7b299; }
-    /* line 1011, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 1023, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .footblock .waxinfo p {
       padding-top: 30px;
       padding-bottom: 33px;
@@ -965,19 +974,19 @@ footer {
       line-height: 1.71;
       text-align: left;
       color: #555555; }
-  /* line 1022, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 1034, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .footblock .recent {
     width: 262px; }
-    /* line 1024, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 1036, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .footblock .recent a {
       text-decoration: none; }
-      /* line 1026, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+      /* line 1038, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
       .footblock .recent a:hover h5 {
         color: #ffffff; }
-      /* line 1030, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+      /* line 1042, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
       .footblock .recent a:hover p {
         color: #c7b299; }
-    /* line 1035, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 1047, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .footblock .recent h2 {
       padding-bottom: 13px;
       padding-top: 14px;
@@ -986,7 +995,7 @@ footer {
       font-weight: bold;
       text-align: left;
       color: #ffffff; }
-    /* line 1044, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 1056, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .footblock .recent h5 {
       padding-bottom: 10px;
       margin-top: 19px;
@@ -997,7 +1006,7 @@ footer {
       text-align: left;
       color: #363636;
       transition: 0.3s; }
-    /* line 1055, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 1067, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .footblock .recent p {
       padding-bottom: 20px;
       font-family: Montserrat;
@@ -1008,13 +1017,13 @@ footer {
       color: #555555;
       border-bottom: 1px solid #252525;
       transition: 0.3s; }
-    /* line 1066, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 1078, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .footblock .recent .noborder {
       border: none; }
-  /* line 1070, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 1082, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .footblock .twit {
     width: 267px; }
-    /* line 1072, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 1084, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .footblock .twit h2 {
       padding-top: 14px;
       padding-bottom: 13px;
@@ -1023,7 +1032,7 @@ footer {
       font-weight: bold;
       text-align: left;
       color: #ffffff; }
-    /* line 1081, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 1093, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .footblock .twit h5 {
       padding-top: 11px;
       padding-bottom: 23px;
@@ -1034,10 +1043,10 @@ footer {
       text-align: left;
       color: #363636;
       border-bottom: 1px solid #252525; }
-    /* line 1092, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 1104, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .footblock .twit .noborder {
       border: none; }
-    /* line 1095, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 1107, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .footblock .twit p {
       padding-top: 17px;
       font-family: Montserrat;
@@ -1046,25 +1055,25 @@ footer {
       line-height: 1.43;
       text-align: left;
       color: #555555; }
-    /* line 1104, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 1116, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .footblock .twit a {
       text-decoration: none;
       color: #ffffff;
       transition: color 0.2s; }
-      /* line 1108, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+      /* line 1120, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
       .footblock .twit a:hover {
         color: #b2b2b2; }
-    /* line 1112, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 1124, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .footblock .twit .hash {
       color: #00bff3; }
-      /* line 1114, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+      /* line 1126, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
       .footblock .twit .hash:hover {
         color: #ffffff;
         text-decoration: underline; }
-  /* line 1122, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 1134, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .footblock .widget {
     width: 280px; }
-    /* line 1124, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 1136, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .footblock .widget h2 {
       padding-top: 14px;
       padding-bottom: 26px;
@@ -1073,16 +1082,16 @@ footer {
       font-weight: bold;
       text-align: left;
       color: #ffffff; }
-    /* line 1133, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 1145, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .footblock .widget .wpict {
       width: 130px;
       height: 98px;
       display: inline-block;
       margin-top: 10px; }
-    /* line 1139, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 1151, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .footblock .widget .wpict_right {
       padding-left: 10px; }
-    /* line 1142, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 1154, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .footblock .widget a {
       -webkit-filter: grayscale(100%);
       -moz-filter: grayscale(100%);
@@ -1090,7 +1099,7 @@ footer {
       -o-filter: grayscale(100%);
       filter: grayscale(100%);
       transition: 0.5s; }
-      /* line 1149, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+      /* line 1161, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
       .footblock .widget a:hover {
         webkit-filter: grayscale(0%);
         -moz-filter: grayscale(0%);
@@ -1098,20 +1107,20 @@ footer {
         -o-filter: grayscale(0%);
         filter: grayscale(0%); }
 
-/* line 1161, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+/* line 1173, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
 .last_footer {
   background-color: #111111;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap; }
-  /* line 1166, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 1178, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .last_footer .copyright {
     line-height: 1;
     padding-left: 376px;
     padding-top: 45px;
     width: 401px;
     padding-bottom: 52px; }
-    /* line 1172, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 1184, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .last_footer .copyright p {
       line-height: 1;
       display: flex;
@@ -1121,31 +1130,31 @@ footer {
       line-height: 1.54;
       text-align: left;
       color: #555555; }
-    /* line 1183, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 1195, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .last_footer .copyright a {
       text-decoration: none;
       display: block;
       padding-right: 10px;
       color: #959595;
       transition: color 0.3s; }
-      /* line 1189, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+      /* line 1201, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
       .last_footer .copyright a:hover {
         color: #c7b299; }
-    /* line 1194, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 1206, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .last_footer .copyright .faq {
       color: #c7b299;
       transition: color 0.3s; }
-      /* line 1197, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+      /* line 1209, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
       .last_footer .copyright .faq:hover {
         color: #959595; }
-    /* line 1201, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 1213, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .last_footer .copyright span {
       padding-top: 2px;
       height: 13px;
       padding-left: 10px;
       display: inline-block;
       border-left: 1px solid #252525; }
-    /* line 1208, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 1220, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .last_footer .copyright .privacy {
       line-height: 1.1;
       vertical-align: middle;
@@ -1153,13 +1162,13 @@ footer {
       border: none;
       padding-left: 0;
       padding-right: 10px; }
-  /* line 1217, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 1229, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .last_footer .design {
     padding-top: 45px;
     padding-bottom: 52px;
     padding-right: 374px;
     width: 17.1875%; }
-  /* line 1223, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 1235, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .last_footer p {
     font-family: Montserrat;
     font-size: 13px;
@@ -1167,7 +1176,7 @@ footer {
     line-height: 1.54;
     text-align: right;
     color: #555555; }
-  /* line 1231, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 1243, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .last_footer .design_span {
     padding-top: 2px;
     height: 13px;
@@ -1175,119 +1184,132 @@ footer {
     padding-right: 10px;
     display: inline-block;
     border-left: 1px solid #252525; }
-  /* line 1239, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 1251, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .last_footer a {
     text-decoration: none;
     color: #959595;
     transition: color 0.3s; }
-    /* line 1243, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 1255, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .last_footer a:hover {
       color: #c7b299; }
 
-/* line 1249, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
-#nav-trigger {
-  display: none; }
-
-/* line 1253, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
-input {
-  display: none; }
-
 @media screen and (max-width: 640px) {
-  /* line 1258, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 1266, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .slider {
     border-top: 1px solid transparent;
     height: 150px;
     width: 605px;
     background-image: url(../img/photo.jpg);
     background-repeat: round; }
-  /* line 1266, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 1272, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    .slider label {
+      cursor: pointer;
+      display: block;
+      position: absolute;
+      top: 50px;
+      left: 500px; }
+  /* line 1282, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  .menu {
+    display: none;
+    margin: 0 auto;
+    height: auto;
+    width: 605px;
+    flex-direction: column; }
+  /* line 1290, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .logo {
     margin-left: 40px; }
-  /* line 1269, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 1293, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .container {
     width: 605px; }
-  /* line 1272, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
-  .menu {
-    display: none; }
-  /* line 1275, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 1296, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .card,
   .search,
   .sliderblock,
   .sliderdot {
     display: none; }
-  /* line 1281, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 1302, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .topsection {
     min-height: 400px;
     width: 605px;
     background-color: #ffffff;
     background-image: none; }
-    /* line 1286, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 1307, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .topsection .links {
       padding-left: 0;
       padding-right: 0; }
-    /* line 1290, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 1311, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .topsection .textback {
       display: none; }
-  /* line 1294, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 1315, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .gside {
     display: none; }
-  /* line 1297, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 1318, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .barr {
     min-width: 605px;
     max-width: 605px; }
-    /* line 1300, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 1321, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .barr .barr_menu {
       display: none; }
-    /* line 1303, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 1324, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .barr .textback {
       max-width: 605px; }
-    /* line 1306, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 1327, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .barr .button {
       display: none; }
-    /* line 1309, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 1330, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .barr .galary {
       flex-direction: column;
       margin-left: 150px;
       margin-bottom: 50px; }
-  /* line 1315, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 1336, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .videoblock {
-    width: 605px; }
-    /* line 1317, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    max-width: 605px;
+    height: 705px;
+    position: relative; }
+    /* line 1340, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .videoblock:before {
       top: 210px;
       left: 285px; }
-    /* line 1321, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 1344, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .videoblock .play {
       position: absolute;
       top: 225px;
       left: 300px; }
-    /* line 1326, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 1349, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .videoblock .textvideo {
       top: 354px;
       left: 30px; }
-  /* line 1331, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 1353, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    .videoblock .video {
+      position: absolute;
+      object-fit: cover;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%; }
+  /* line 1363, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .mobile {
     width: 605px;
     height: 615px; }
-    /* line 1334, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 1366, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .mobile img {
       margin-top: 265px;
       margin-left: 40px;
       height: 350px; }
-    /* line 1339, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 1371, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .mobile .text_mobile {
       margin-top: 40px;
       margin-left: -250px;
       width: 657px;
       display: flex; }
-      /* line 1344, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+      /* line 1376, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
       .mobile .text_mobile h2 {
         font-family: Raleway;
         font-size: 30px;
         font-weight: 600;
         text-align: center;
         color: #555555; }
-      /* line 1351, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+      /* line 1383, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
       .mobile .text_mobile p {
         padding-top: 10px;
         font-family: Montserrat;
@@ -1297,11 +1319,11 @@ input {
         text-align: left;
         color: #8c8c8c;
         padding-bottom: 40px; }
-      /* line 1361, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+      /* line 1393, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
       .mobile .text_mobile ul {
         padding-left: 250px;
         list-style-type: none; }
-      /* line 1365, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+      /* line 1397, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
       .mobile .text_mobile li {
         padding-left: 50px;
         background: url(../img/list-style.png) no-repeat left center;
@@ -1311,38 +1333,121 @@ input {
         line-height: 2;
         text-align: left;
         color: #8c8c8c; }
-  /* line 1378, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 1410, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .Posts .textback {
     width: 605px; }
-  /* line 1383, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 1415, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .Post_link {
     margin-top: 60px;
     margin-left: 150px; }
-    /* line 1387, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 1419, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .Post_link article {
       margin-bottom: 30px; }
-  /* line 1391, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 1423, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .slider_arrows {
     display: none; }
-  /* line 1394, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  /* line 1426, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
   .partners {
     background-image: url(../img/background.jpg);
     background-size: cover;
     height: 200px; }
-    /* line 1398, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 1430, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .partners .partners_link {
       padding-top: 0px;
       margin-left: 20px;
       margin-right: 20px;
       display: flex;
       justify-content: space-between; }
-    /* line 1405, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    /* line 1437, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
     .partners a {
       margin-left: 10px; }
-      /* line 1407, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+      /* line 1439, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
       .partners a img {
         display: inline-block;
         vertical-align: middle;
-        width: 105px; } }
+        width: 105px; }
+  /* line 1447, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  footer {
+    background-color: #191919;
+    border-top: 1px solid transparent; }
+  /* line 1452, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  .footblock {
+    margin-left: 15px;
+    margin-right: 20px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    width: 600px; }
+    /* line 1458, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    .footblock .waxinfo {
+      width: 260px; }
+      /* line 1460, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+      .footblock .waxinfo .more {
+        display: none; }
+      /* line 1464, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+      .footblock .waxinfo p {
+        display: none; }
+    /* line 1468, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    .footblock .recent {
+      padding-left: 15px;
+      width: 210px; }
+      /* line 1471, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+      .footblock .recent h2 {
+        font-size: 18px; }
+      /* line 1475, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+      .footblock .recent h5 {
+        display: none; }
+      /* line 1478, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+      .footblock .recent p {
+        display: none; }
+      /* line 1481, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+      .footblock .recent .noborder {
+        border: none; }
+    /* line 1485, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    .footblock .twit {
+      width: 170px; }
+      /* line 1487, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+      .footblock .twit h2 {
+        font-size: 18px; }
+      /* line 1490, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+      .footblock .twit h5 {
+        display: none; }
+      /* line 1493, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+      .footblock .twit p {
+        display: none; }
+      /* line 1496, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+      .footblock .twit a {
+        display: none; }
+    /* line 1501, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    .footblock .widget {
+      padding-left: 10px;
+      width: 300px; }
+      /* line 1504, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+      .footblock .widget h2 {
+        font-size: 18px; }
+      /* line 1507, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+      .footblock .widget .wpict {
+        display: none; }
+      /* line 1510, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+      .footblock .widget .wpict_right {
+        display: none; }
+  /* line 1517, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  .last_footer {
+    flex-direction: column; }
+    /* line 1519, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    .last_footer .copyright {
+      line-height: 1;
+      padding-top: 45px;
+      padding-left: 100px;
+      padding-bottom: 10px; }
+    /* line 1526, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+    .last_footer .design {
+      padding-top: 10px;
+      padding-bottom: 20px;
+      padding-right: 0px;
+      width: 400px;
+      padding-left: 50px; }
+  /* line 1536, C:/Users/shambay/Desktop/Waxom/scss/styles.scss */
+  form {
+    display: none; } }
 
 /*# sourceMappingURL=styles.css.map */
