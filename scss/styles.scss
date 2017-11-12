@@ -2,7 +2,7 @@
 @import url(../fonts/fontello/css/fontello-embedded.css);
 @import url('https://fonts.googleapis.com/css?family=Montserrat:200,300,400|Raleway:400,500,600,700,800|Roboto');
 @import url(../stylesheets/search.css);
-
+@import url(../stylesheets/slendr.min.css);
 $cwidth: 1920px;
 
 * {
@@ -18,13 +18,24 @@ $cwidth: 1920px;
 }
 
 .slider {
+    position: relative;
     border-top: 1px solid transparent;
     height: 1024px;
     width: $cwidth;
     background-image: url(../img/photo.jpg);
     .upper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
         max-width: $cwidth;
         display: flex;
+        .sliderblock {
+            position: absolute;
+            left: 666px;
+            top: 381px;
+
+        }
 
     }
     label {
@@ -37,12 +48,13 @@ $cwidth: 1920px;
     #menu {
         display: none;
     }
-    input[type="checkbox"]:checked ~ .menu {
-        display: block;
+    #menu[type="checkbox"]:checked ~ .menu {
+        visibility: visible;
+        transition: 1s;
     }
 
-}
 
+}
 
 
 .logo {
@@ -114,6 +126,7 @@ $cwidth: 1920px;
 }
 
 .search {
+    margin-top: 57px;
     font-size: 24px;
     margin-left: 15px;
     width: 24px;
@@ -122,45 +135,6 @@ $cwidth: 1920px;
     &:hover {
         color: #c7b299;
         transition: 0.2s;
-    }
-}
-
-.sliderblock {
-    padding-top: 285px;
-    max-width: $cwidth;
-    display: flex;
-    justify-content: space-between;
-
-}
-
-.arrow {
-    margin-left: 150px;
-    display: block;
-    width: 40px;
-    height: 73px;
-    opacity: 0.5;
-    text-decoration: none;
-    color: #ffffff;
-    transition: color 0.3s, transform 0.3s;
-    &:hover {
-        color: #d3c1ad;
-        transform: translate(-15px, 0);
-    }
-}
-
-.arrowright {
-    margin-right: 150px;
-    display: block;
-    width: 40px;
-    height: 73px;
-    opacity: 0.5;
-    text-decoration: none;
-    color: #ffffff;
-    transition: color 0.3s, transform 0.3s;
-    &:hover {
-        color: #d3c1ad;
-
-        transform: translate(15px, 0);
     }
 }
 
@@ -255,37 +229,6 @@ $cwidth: 1920px;
     }
 }
 
-.sliderdot {
-    margin: 327px auto 0;
-    width: 110px;
-    display: flex;
-    justify-content: space-between;
-    list-style-type: none;
-
-}
-
-.dot {
-    margin-left: 10px;
-    border-radius: 50%;
-    width: 11px;
-    display: inline-block;
-    height: 11px;
-    opacity: 0.5;
-    background-color: #ffffff;
-    &:hover {
-        opacity: 1;
-    }
-}
-
-.dotactive {
-    margin-left: 10px;
-    border-radius: 50%;
-    width: 11px;
-    display: inline-block;
-    height: 11px;
-    background-color: transparent;
-    border: solid 2px #d3c1ad;
-}
 
 .topsection {
     min-height: 1075px;
@@ -535,7 +478,8 @@ $cwidth: 1920px;
             left: 144px;
             top: 106px;
             opacity: 0;
-            transition: color 0.5s opacity 0.5s;
+            transition: color 0.5s;
+            transition: opacity 0.5s;
             &:hover {
                 color: #c7b299;
             }
@@ -552,7 +496,8 @@ $cwidth: 1920px;
             left: 198px;
             top: 106px;
             opacity: 0;
-            transition: color 0.5s opacity 0.5s;
+            transition: color 0.5s;
+            transition: opacity 0.5s;
             &:hover {
                 color: #c7b299;
             }
@@ -628,7 +573,7 @@ $cwidth: 1920px;
 
 .videoblock {
     position: relative;
-    &:before {
+    .shadow {
         content: "";
         width: 100px;
         height: 100px;
@@ -637,11 +582,11 @@ $cwidth: 1920px;
         top: 210px;
         left: 911px;
         border-radius: 50%;
-        z-index: 1;
+        z-index: 0.9;
         opacity: 0;
         transition: opacity 0.7s;
     }
-    &:hover:before {
+    &:hover .shadow {
         opacity: 0.7;
 
     }
@@ -649,14 +594,22 @@ $cwidth: 1920px;
         opacity: 1;
 
     }
-
+    button {
+        all: unset;
+    }
     .play {
+        outline: none;
+        border-radius: 50%;
+        width: 70px;
+        height: 70px;
         position: absolute;
         top: 225px;
         left: 926px;
         z-index: 1;
         opacity: 0.7;
         transition: opacity 0.4s;
+        background-image: url(../img/icon-play.png);
+        background-position: 100%;
         &:hover {
             opacity: 1;
 
@@ -667,6 +620,54 @@ $cwidth: 1920px;
             transition: opacity 0.4s;
         }
 
+    }
+    .pause {
+        display: none;
+        outline: none;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 600px;
+        left: 500px;
+        z-index: 1;
+        opacity: 0.7;
+        transition: opacity 0.4s;
+        background-image: url(../img/pause.svg);
+        background-position: 100%;
+        &:hover {
+            opacity: 1;
+
+
+        }
+        &:active {
+            opacity: 0.8;
+            transition: opacity 0.4s;
+        }
+    }
+    .closevid {
+        display: none;
+        outline: none;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: 600px;
+        left: 400px;
+        z-index: 1;
+        opacity: 0.7;
+        transition: opacity 0.4s;
+        background-image: url(../img/close.svg);
+        background-position: 100%;
+        &:hover {
+            opacity: 1;
+
+
+        }
+        &:active {
+            opacity: 0.8;
+            transition: opacity 0.4s;
+        }
     }
     .textvideo {
         margin: auto;
@@ -764,6 +765,9 @@ $cwidth: 1920px;
     display: flex;
     justify-content: space-between;
     text-align: center;
+    figure {
+        width: 100%;
+    }
     h2 {
         padding-top: 30px;
         height: 34px;
@@ -1159,11 +1163,11 @@ footer {
             filter: grayscale(100%);
             transition: 0.5s;
             &:hover {
-                webkit-filter: grayscale(0%);
-                -moz-filter: grayscale(0%);
-                -ms-filter: grayscale(0%);
-                -o-filter: grayscale(0%);
-                filter: grayscale(0%);
+                -webkit-filter: none;
+                -moz-filter: none;
+                -ms-filter: none;
+                -o-filter: none;
+                filter: none;
             }
         }
 
@@ -1262,7 +1266,10 @@ footer {
 
 
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 605px) {
+    .conteiner {
+        width: 605px;
+    }
     .slider {
         border-top: 1px solid transparent;
         height: 150px;
@@ -1277,15 +1284,38 @@ footer {
             left: 500px;
 
         }
+        .menu {
+            visibility: hidden;
+            margin-left: -100px;
+            display: block;
+            margin: 0 auto;
+            height: auto;
+            width: 605px;
+            flex-direction: column;
+            position: absolute;
+            left: 0px;
+            top: 150px;
+            z-index: 3;
+            li {
+                padding: 0px;
+            }
+            a {
+                font-size: 18px;
+                line-height: 1.6;
+                text-align: center;
+                display: block;
+                width: 605px;
+                height: 30px;
+                background-color: #555555;
+                border: 1px solid #ffffff;
+            }
+        }
+        .slendr {
+            height: 150px;
+        }
 
     }
-    .menu {
-        display: none;
-        margin: 0 auto;
-        height: auto;
-        width: 605px;
-        flex-direction: column;
-    }
+
 
     .logo {
         margin-left: 40px;
@@ -1296,7 +1326,8 @@ footer {
     .card,
     .search,
     .sliderblock,
-    .sliderdot {
+    .slendr-control,
+    .slendr-direction {
         display: none;
     }
     .topsection {
@@ -1327,11 +1358,13 @@ footer {
         .button {
             display: none;
         }
-        .galary {
-            flex-direction: column;
-            margin-left: 150px;
-            margin-bottom: 50px;
-        }
+
+    }
+    .galary {
+        max-width: 450px;
+        flex-direction: column;
+        margin-left: 150px;
+        margin-bottom: 50px;
     }
     .videoblock {
         max-width: 605px;
@@ -1357,6 +1390,11 @@ footer {
             left: 0;
             width: 100%;
             height: 100%;
+        }
+        .shadow {
+            position: absolute;
+            top: 210px;
+            left: 285px;
         }
 
     }
@@ -1533,7 +1571,8 @@ footer {
 
 
     }
-    form{
-        display:none;
+    form {
+        display: none;
     }
+
 }

@@ -2,6 +2,7 @@
 @import url(../fonts/fontello/css/fontello-embedded.css);
 @import url("https://fonts.googleapis.com/css?family=Montserrat:200,300,400|Raleway:400,500,600,700,800|Roboto");
 @import url(../stylesheets/search.css);
+@import url(../stylesheets/slendr.min.css);
 * {
   margin: 0;
   padding: 0;
@@ -14,6 +15,7 @@
 }
 
 .slider {
+  position: relative;
   border-top: 1px solid transparent;
   height: 1024px;
   width: 1920px;
@@ -21,8 +23,18 @@
 }
 
 .slider .upper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
   max-width: 1920px;
   display: flex;
+}
+
+.slider .upper .sliderblock {
+  position: absolute;
+  left: 666px;
+  top: 381px;
 }
 
 .slider label {
@@ -37,8 +49,9 @@
   display: none;
 }
 
-.slider input[type="checkbox"]:checked ~ .menu {
-  display: block;
+.slider #menu[type="checkbox"]:checked ~ .menu {
+  visibility: visible;
+  transition: 1s;
 }
 
 .logo {
@@ -115,6 +128,7 @@
 }
 
 .search {
+  margin-top: 57px;
   font-size: 24px;
   margin-left: 15px;
   width: 24px;
@@ -125,45 +139,6 @@
 .search:hover {
   color: #c7b299;
   transition: 0.2s;
-}
-
-.sliderblock {
-  padding-top: 285px;
-  max-width: 1920px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.arrow {
-  margin-left: 150px;
-  display: block;
-  width: 40px;
-  height: 73px;
-  opacity: 0.5;
-  text-decoration: none;
-  color: #ffffff;
-  transition: color 0.3s, transform 0.3s;
-}
-
-.arrow:hover {
-  color: #d3c1ad;
-  transform: translate(-15px, 0);
-}
-
-.arrowright {
-  margin-right: 150px;
-  display: block;
-  width: 40px;
-  height: 73px;
-  opacity: 0.5;
-  text-decoration: none;
-  color: #ffffff;
-  transition: color 0.3s, transform 0.3s;
-}
-
-.arrowright:hover {
-  color: #d3c1ad;
-  transform: translate(15px, 0);
 }
 
 .textblock {
@@ -262,38 +237,6 @@
   position: absolute;
   left: 40px;
   top: 15px;
-}
-
-.sliderdot {
-  margin: 327px auto 0;
-  width: 110px;
-  display: flex;
-  justify-content: space-between;
-  list-style-type: none;
-}
-
-.dot {
-  margin-left: 10px;
-  border-radius: 50%;
-  width: 11px;
-  display: inline-block;
-  height: 11px;
-  opacity: 0.5;
-  background-color: #ffffff;
-}
-
-.dot:hover {
-  opacity: 1;
-}
-
-.dotactive {
-  margin-left: 10px;
-  border-radius: 50%;
-  width: 11px;
-  display: inline-block;
-  height: 11px;
-  background-color: transparent;
-  border: solid 2px #d3c1ad;
 }
 
 .topsection {
@@ -557,7 +500,8 @@
   left: 144px;
   top: 106px;
   opacity: 0;
-  transition: color 0.5s opacity 0.5s;
+  transition: color 0.5s;
+  transition: opacity 0.5s;
 }
 
 .galary article .links:hover {
@@ -576,7 +520,8 @@
   left: 198px;
   top: 106px;
   opacity: 0;
-  transition: color 0.5s opacity 0.5s;
+  transition: color 0.5s;
+  transition: opacity 0.5s;
 }
 
 .galary article .lupa:hover {
@@ -660,7 +605,7 @@
   position: relative;
 }
 
-.videoblock:before {
+.videoblock .shadow {
   content: "";
   width: 100px;
   height: 100px;
@@ -669,12 +614,12 @@
   top: 210px;
   left: 911px;
   border-radius: 50%;
-  z-index: 1;
+  z-index: 0.9;
   opacity: 0;
   transition: opacity 0.7s;
 }
 
-.videoblock:hover:before {
+.videoblock:hover .shadow {
   opacity: 0.7;
 }
 
@@ -682,13 +627,23 @@
   opacity: 1;
 }
 
+.videoblock button {
+  all: unset;
+}
+
 .videoblock .play {
+  outline: none;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
   position: absolute;
   top: 225px;
   left: 926px;
   z-index: 1;
   opacity: 0.7;
   transition: opacity 0.4s;
+  background-image: url(../img/icon-play.png);
+  background-position: 100%;
 }
 
 .videoblock .play:hover {
@@ -696,6 +651,56 @@
 }
 
 .videoblock .play:active {
+  opacity: 0.8;
+  transition: opacity 0.4s;
+}
+
+.videoblock .pause {
+  display: none;
+  outline: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 600px;
+  left: 500px;
+  z-index: 1;
+  opacity: 0.7;
+  transition: opacity 0.4s;
+  background-image: url(../img/pause.svg);
+  background-position: 100%;
+}
+
+.videoblock .pause:hover {
+  opacity: 1;
+}
+
+.videoblock .pause:active {
+  opacity: 0.8;
+  transition: opacity 0.4s;
+}
+
+.videoblock .closevid {
+  display: none;
+  outline: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 600px;
+  left: 400px;
+  z-index: 1;
+  opacity: 0.7;
+  transition: opacity 0.4s;
+  background-image: url(../img/close.svg);
+  background-position: 100%;
+}
+
+.videoblock .closevid:hover {
+  opacity: 1;
+}
+
+.videoblock .closevid:active {
   opacity: 0.8;
   transition: opacity 0.4s;
 }
@@ -799,6 +804,10 @@
   display: flex;
   justify-content: space-between;
   text-align: center;
+}
+
+.calc figure {
+  width: 100%;
 }
 
 .calc h2 {
@@ -1228,11 +1237,11 @@ footer {
 }
 
 .footblock .widget a:hover {
-  webkit-filter: grayscale(0%);
-  -moz-filter: grayscale(0%);
-  -ms-filter: grayscale(0%);
-  -o-filter: grayscale(0%);
-  filter: grayscale(0%);
+  -webkit-filter: none;
+  -moz-filter: none;
+  -ms-filter: none;
+  -o-filter: none;
+  filter: none;
 }
 
 .last_footer {
@@ -1334,7 +1343,10 @@ footer {
   color: #c7b299;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 605px) {
+  .conteiner {
+    width: 605px;
+  }
   .slider {
     border-top: 1px solid transparent;
     height: 150px;
@@ -1349,12 +1361,34 @@ footer {
     top: 50px;
     left: 500px;
   }
-  .menu {
-    display: none;
+  .slider .menu {
+    visibility: hidden;
+    margin-left: -100px;
+    display: block;
     margin: 0 auto;
     height: auto;
     width: 605px;
     flex-direction: column;
+    position: absolute;
+    left: 0px;
+    top: 150px;
+    z-index: 3;
+  }
+  .slider .menu li {
+    padding: 0px;
+  }
+  .slider .menu a {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center;
+    display: block;
+    width: 605px;
+    height: 30px;
+    background-color: #555555;
+    border: 1px solid #ffffff;
+  }
+  .slider .slendr {
+    height: 150px;
   }
   .logo {
     margin-left: 40px;
@@ -1365,7 +1399,8 @@ footer {
   .card,
   .search,
   .sliderblock,
-  .sliderdot {
+  .slendr-control,
+  .slendr-direction {
     display: none;
   }
   .topsection {
@@ -1397,7 +1432,8 @@ footer {
   .barr .button {
     display: none;
   }
-  .barr .galary {
+  .galary {
+    max-width: 450px;
     flex-direction: column;
     margin-left: 150px;
     margin-bottom: 50px;
@@ -1427,6 +1463,11 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
+  }
+  .videoblock .shadow {
+    position: absolute;
+    top: 210px;
+    left: 285px;
   }
   .mobile {
     width: 605px;

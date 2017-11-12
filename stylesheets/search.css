@@ -3,7 +3,9 @@
 	margin: 0px;
 	padding: 0px;
 }
-
+.clearfix{
+	clear: both;
+}
 input{
     margin-top: 51px;
 	background-color: #ffffff;
@@ -18,6 +20,7 @@ input{
 .expandSearch,
 .expandSearch input,
 .expandSearch a{
+    float:left;
 	-webkit-transition: all 0.4s ease-in-out;
 	-moz-transition: all 0.4s ease-in-out;
 	transition: all 0.4s ease-in-out;
@@ -34,6 +37,6 @@ input{
 
 .showSearch input{
 	margin-left: 10px;
-	width: 120px;
+	width: 125px;
 	opacity: 1;
 }

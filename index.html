@@ -3,68 +3,76 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width-device-width, initial-scale=1.0"> 
     <title>Waxom</title>
-    <link rel="stylesheet" href="stylesheets/styles.css"> 
+    <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="icon" type="image/png" href="favicon.png">
-    </head>
+</head>
 
 <body>
     <div class="container">
-        <header class="slider">
-            <div class="upper">
-                <a class="logo" href="index.html"><img src="img/logos.png" alt="">Waxom</a>
-                 <label for="menu"></label>
-                 <input type="checkbox" id="menu">
-                <nav>
-                    <ul class="menu">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Portfolio</a></li>
-                        <li><a href="#">Features</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Pricing</a></li>
-                        <li><a href="#">Shortcodes</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </nav> 
-                <a class="card" href="#"><i class="icon-icon-cart"></i></a> 
-                <form>
 
-		<p class="expandSearch">
-			<input type="text" placeholder="Search" />
-			<a class="search" href="#">
+        <header class="slider">
+            <div class="slendr">
+                <div class="upper">
+                    <a class="logo" href="index.html"><img src="img/logos.png" alt="">Waxom</a>
+                    <nav>
+                        <label for="menu"></label>
+                        <input type="checkbox" id="menu">
+                        <ul class="menu">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Portfolio</a></li>
+                            <li><a href="#">Features</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Pricing</a></li>
+                            <li><a href="#">Shortcodes</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <a class="card" href="#"><i class="icon-icon-cart"></i></a>
+                    <form>
+
+                        <p class="expandSearch">
+                            <input type="text" placeholder="Search" />
+                            <a class="search" href="#">
 				<i class="icon-icon-search" aria-hidden="true"></i>
 			</a>
-		</p>
+                        </p>
 
-
-	</form>
+                    </form>
+                    <section class="sliderblock">
+                        <div class="textblock">
+                            <h4>Unique and Modern Design</h4>
+                            <h1>Portfolio PSD Template</h1>
+                            <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id&nbsp;quod mazim placerat facer possim assum.</p> <a class="button" href="#"><span class="get">GET&nbsp;STARTED</span> </a> </div>
+                    </section>
                 </div>
-            <section class="sliderblock">
-                <a class="arrow" href="#"> <i class="fa fa-angle-left fa-5x" aria-hidden="true"></i> </a>
-                <div class="textblock">
-                    <h4>Unique and Modern Design</h4>
-                    <h1>Portfolio PSD Template</h1>
-                    <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id&nbsp;quod mazim placerat facer possim assum.</p> <a class="button" href="#"><span class="get">GET&nbsp;STARTED</span> </a> </div> <a class="arrowright" href="#"><i class="fa fa-angle-right fa-5x" aria-hidden="true"></i></a> </section>
-            <ul class="sliderdot">
-                <li>
-                    <a class="dot" href="#"></a>
-                </li>
-                <li>
-                    <a class="dotactive" href="#"></a>
-                </li>
-                <li>
-                    <a class="dot" href="#"></a>
-                </li>
-                <li>
-                    <a class="dot" href="#"></a>
-                </li>
-                <li>
-                    <a class="dot" href="#"></a>
-                </li>
-            </ul>
+                <nav class="slendr-direction">
+                    <a href="#" class="slendr-prev"><i class="fa fa-angle-left"></i></a>
+                    <a href="#" class="slendr-next"><i class="fa fa-angle-right"></i></a>
+                </nav>
+
+                <nav class="slendr-control">
+                    <p></p>
+                </nav>
+
+                <div class="slendr-slides">
+
+                    <div class="slendr-slide" data-src="img/photo.jpg">
+                    </div>
+                    <div class="slendr-slide" data-src="img/photoslide2.jpg">
+                    </div>
+                    <div class="slendr-slide" data-src="img/photoslide3.jpg">
+                    </div>
+                    <div class="slendr-slide" data-src="img/photoslide4.jpg">
+                    </div>
+                    <div class="slendr-slide" data-src="img/photoslide5.jpg">
+                    </div>
+
+                </div>
+            </div>
+
         </header>
         <main>
             <section class="topsection">
@@ -161,9 +169,12 @@
                     </article> <a class="button" href="#"><span class="galarybut">Load&nbsp;More</span> </a> </div>
             </section>
             <section class="videoblock">
-                <video class="video" width="auto" height="auto" poster="img/photo7.jpg" >
+                <video id="banner-video" preload="auto" loop class="video" poster="img/photo7.jpg">
                     <source src="video/Video1.mp4" type="video/mp4" > </video>
-                <a class="play" href="#"> <img src="img/icon-play.png" alt="#"></a>
+                <button class="play"></button>
+                <button class="pause"></button>
+                <button class="closevid"></button>
+                <span class="shadow"></span>
                 <div class="textvideo">
                     <h2>Waxom Video Presentation</h2>
                     <p>Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius, qui sequitur mutationem consuetudium.</p>
@@ -185,27 +196,27 @@
                 <div class="calc">
                     <figure> <img src="img/icon.png" alt="#">
                         <figcaption>
-                            <h2>3587</h2>
+                            <h2 id="number1">3587</h2>
                             <p>Satisfied Clients</p> <span></span> </figcaption>
                     </figure>
                     <figure> <img src="img/icon1.png" alt="#">
                         <figcaption>
-                            <h2>207</h2>
+                            <h2 id="number2">207</h2>
                             <p>Cups of coffee</p> <span></span> </figcaption>
                     </figure>
                     <figure> <img src="img/icon2.png" alt="#">
                         <figcaption>
-                            <h2>2500</h2>
+                            <h2 id="number3">2500</h2>
                             <p>Blog posts</p> <span></span> </figcaption>
                     </figure>
                     <figure> <img src="img/icon3.png" alt="#">
                         <figcaption>
-                            <h2>873</h2>
+                            <h2 id="number4">873</h2>
                             <p>Likes</p> <span></span> </figcaption>
                     </figure>
                     <figure> <img src="img/icon4.png" alt="#">
                         <figcaption>
-                            <h2>900</h2>
+                            <h2 id="number5">900</h2>
                             <p>We launched</p> <span></span> </figcaption>
                     </figure>
                 </div>
@@ -285,7 +296,15 @@
             </div>
         </footer>
     </div>
-    <script  src="js/index.js"></script>
+    <script src="js/index.js"></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+    <script src="js/counter.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    <script src="js/play.js"></script>
+    <script src='https://unpkg.com/slendr/dist/slendr.min.js'></script>
+
+    <script src="js/slider.js"></script>
 </body>
 
 </html>
